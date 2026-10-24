@@ -1,20 +1,9 @@
-import { useState } from 'react'
-import Marketplace from './components/Marketplace'
-import Pharmacy from './components/Pharmacy'
+
+import "./App.css";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('marketplace')
-
-  const handlePageChange = (pageName) => {
-    setCurrentPage(pageName)
-  }
-
-  return (
-    <>
-      {currentPage === 'marketplace' && <Marketplace onPageChange={handlePageChange} />}
-      {currentPage === 'pharmacy' && <Pharmacy onPageChange={handlePageChange} />}
-    </>
-  )
+  return <AppRouter />;
 }
 
 export default App;
